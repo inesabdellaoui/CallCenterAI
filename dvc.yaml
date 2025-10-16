@@ -1,0 +1,10 @@
+stages:
+  prepare:
+    cmd: python src/prepare_data.py
+    deps:
+      - data/raw/IT_Service_Requests.csv
+      - src/prepare_data.py
+    outs:
+      - data/processed/train.csv
+      - data/processed/val.csv
+      - data/processed/test.csv
